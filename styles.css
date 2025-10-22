@@ -1,0 +1,257 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, #111136, #000000);
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  min-height: 100vh; /* full screen height */
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+/* Make main content flex-grow */
+.container > section,
+.container > .contact-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.klippros-logo {
+  height: 160px;
+  max-width: 100%;
+  width: auto;
+}
+
+/* Products Section */
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Product Card */
+.product-card {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.product-logo {
+  width: 100px;
+  height: auto;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.product-description {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn,
+.store-btn {
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.btn,
+.store-btn,
+.btn img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0 1.5rem;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn:hover,
+.store-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Product Buttons Layout */
+.product-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.store-btn img {
+  height: 50px; /* correct height */
+  width: auto;
+  display: block;
+}
+
+/* Vision Section */
+.vision {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Contact Section */
+.contact-section {
+  margin: 2rem 0;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  align-items: center;
+  gap: 0.5rem; /* space between copyright & impressum */
+  color: #aaa;
+}
+
+.footer-content a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-content a:hover {
+  color: #ffffff;
+}
+
+/* Responsive: keep footer stacked on small screens */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .products-title {
+    text-align: center;
+  }
+
+  .product-buttons {
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Impressum Section */
+.impressum {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.impressum h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.impressum a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.impressum a:hover {
+  color: #ffffff;
+}
