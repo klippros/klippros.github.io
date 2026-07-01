@@ -6,19 +6,25 @@
   font-family: "Montserrat", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
+html {
+  background-color: #000000;
 }
 
 body {
-  background: radial-gradient(circle at top, #111136, #000000);
-  background-attachment: fixed;
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
   color: #ffffff;
   display: flex;
   justify-content: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at top, #111136, #000000);
 }
 
 .fade-in {
